@@ -1,0 +1,10 @@
+{
+    "basePath": "C:\\xampp\\htdocs-phpgen2\\app\\",
+    "modelsDirectory": "models",
+    "controllersDirectory": "controllers",
+    "viewsDirectory": "views",
+    "routerFile": "router.php",
+    "indexFileName": "index.php",
+    "databaseCreationFileName": "database.sqlite",
+    "targetDatabaseFileName": "database.sqlite"
+}
