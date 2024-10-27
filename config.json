@@ -1,0 +1,682 @@
+{
+    "tables": {
+        "Student": {
+            "fields": {
+                "studentId": {
+                    "fieldLabel": "Student ID",
+                    "fieldType": "number",
+                    "fieldLength": null,
+                    "keyField": "yes",
+                    "showInForm": {
+                        "displayField": "hide",
+                        "dataEntryRequired": "yes"
+                    },
+                    "showInList": {
+                        "displayField": "show"
+                    },
+                    "showInDetailView": {
+                        "displayField": "show"
+                    }
+                },
+                "name": {
+                    "fieldLabel": "Name",
+                    "fieldType": "text",
+                    "fieldLength": "100",
+                    "keyField": "no",
+                    "showInForm": {
+                        "displayField": "show"
+                    },
+                    "showInList": {
+                        "displayField": "show"
+                    },
+                    "showInDetailView": {
+                        "displayField": "show"
+                    }
+                },
+                "sex": {
+                    "fieldLabel": "Sex",
+                    "fieldType": "lookup",
+                    "fieldLength": null,
+                    "keyField": "no",
+                    "lookupDefinition": {
+                        "values": {
+                            "m": "men",
+                            "f": "female"
+                        }
+                    },
+                    "showInForm": {
+                        "displayField": "show"
+                    },
+                    "showInList": {
+                        "displayField": "show"
+                    },
+                    "showInDetailView": {
+                        "displayField": "show"
+                    }
+                },
+                "created_at": {
+                    "fieldLabel": "Created At",
+                    "fieldType": "date",
+                    "fieldLength": null,
+                    "keyField": "no",
+                    "showInForm": {
+                        "displayField": "hide"
+                    },
+                    "showInList": {
+                        "displayField": "show"
+                    },
+                    "showInDetailView": {
+                        "displayField": "show"
+                    }
+                },
+                "updated_at": {
+                    "fieldLabel": "Updated At",
+                    "fieldType": "date",
+                    "fieldLength": null,
+                    "keyField": "no",
+                    "showInForm": {
+                        "displayField": "hide"
+                    },
+                    "showInList": {
+                        "displayField": "show"
+                    },
+                    "showInDetailView": {
+                        "displayField": "show"
+                    }
+                }
+            },
+            "subTables": {
+                "StudentTest": {
+                    "foreignKey": "studentId",
+                    "editMode": "single"
+                }
+            }
+        },
+        "Test": {
+            "fields": {
+                "testId": {
+                    "fieldLabel": "Test ID",
+                    "fieldType": "number",
+                    "fieldLength": null,
+                    "keyField": "yes",
+                    "showInForm": {
+                        "displayField": "hide"
+                    },
+                    "showInList": {
+                        "displayField": "show"
+                    },
+                    "showInDetailView": {
+                        "displayField": "show"
+                    }
+                },
+                "title": {
+                    "fieldLabel": "Title",
+                    "fieldType": "text",
+                    "fieldLength": "150",
+                    "keyField": "no",
+                    "showInForm": {
+                        "displayField": "show"
+                    },
+                    "showInList": {
+                        "displayField": "show"
+                    },
+                    "showInDetailView": {
+                        "displayField": "show"
+                    }
+                },
+                "date": {
+                    "fieldLabel": "Date",
+                    "fieldType": "date",
+                    "fieldLength": null,
+                    "keyField": "no",
+                    "showInForm": {
+                        "displayField": "show"
+                    },
+                    "showInList": {
+                        "displayField": "show"
+                    },
+                    "showInDetailView": {
+                        "displayField": "show"
+                    }
+                },
+                "scoringTableId": {
+                    "fieldLabel": "Scoring Table",
+                    "fieldType": "lookup",
+                    "fieldLength": null,
+                    "keyField": "no",
+                    "lookupDefinition": {
+                        "lookupTable": "ScoringTable",
+                        "lookupTableIdField": "scoringTableId",
+                        "displayFieldColumn": "show"
+                    },
+                    "showInForm": {
+                        "displayField": "show"
+                    },
+                    "showInList": {
+                        "displayField": "show"
+                    },
+                    "showInDetailView": {
+                        "displayField": "show"
+                    }
+                },
+                "created_at": {
+                    "fieldLabel": "Created At",
+                    "fieldType": "date",
+                    "fieldLength": null,
+                    "keyField": "no",
+                    "showInForm": {
+                        "displayField": "hide"
+                    },
+                    "showInList": {
+                        "displayField": "show"
+                    },
+                    "showInDetailView": {
+                        "displayField": "show"
+                    }
+                },
+                "updated_at": {
+                    "fieldLabel": "Updated At",
+                    "fieldType": "date",
+                    "fieldLength": null,
+                    "keyField": "no",
+                    "showInForm": {
+                        "displayField": "hide"
+                    },
+                    "showInList": {
+                        "displayField": "show"
+                    },
+                    "showInDetailView": {
+                        "displayField": "show"
+                    }
+                }
+            }
+        },
+        "StudentTest": {
+            "fields": {
+                "studentTestId": {
+                    "fieldLabel": "Student Test ID",
+                    "fieldType": "number",
+                    "fieldLength": null,
+                    "keyField": "yes",
+                    "showInForm": {
+                        "displayField": "hide"
+                    },
+                    "showInList": {
+                        "displayField": "show"
+                    },
+                    "showInDetailView": {
+                        "displayField": "show"
+                    }
+                },
+                "studentId": {
+                    "fieldLabel": "Student",
+                    "fieldType": "lookup",
+                    "fieldLength": null,
+                    "keyField": "no",
+                    "lookupDefinition": {
+                        "lookupTable": "Student",
+                        "lookupTableIdField": "studentId",
+                        "displayFieldColumn": "show"
+                    },
+                    "showInForm": {
+                        "displayField": "show"
+                    },
+                    "showInList": {
+                        "displayField": "show"
+                    },
+                    "showInDetailView": {
+                        "displayField": "show"
+                    }
+                },
+                "testId": {
+                    "fieldLabel": "Test",
+                    "fieldType": "lookup",
+                    "fieldLength": null,
+                    "keyField": "no",
+                    "lookupDefinition": {
+                        "lookupTable": "Test",
+                        "lookupTableIdField": "testId",
+                        "displayFieldColumn": "show"
+                    },
+                    "showInForm": {
+                        "displayField": "show"
+                    },
+                    "showInList": {
+                        "displayField": "show"
+                    },
+                    "showInDetailView": {
+                        "displayField": "show"
+                    }
+                },
+                "created_at": {
+                    "fieldLabel": "Created At",
+                    "fieldType": "date",
+                    "fieldLength": null,
+                    "keyField": "no",
+                    "showInForm": {
+                        "displayField": "hide"
+                    },
+                    "showInList": {
+                        "displayField": "show"
+                    },
+                    "showInDetailView": {
+                        "displayField": "show"
+                    }
+                },
+                "updated_at": {
+                    "fieldLabel": "Updated At",
+                    "fieldType": "date",
+                    "fieldLength": null,
+                    "keyField": "no",
+                    "showInForm": {
+                        "displayField": "hide"
+                    },
+                    "showInList": {
+                        "displayField": "show"
+                    },
+                    "showInDetailView": {
+                        "displayField": "show"
+                    }
+                }
+            }
+        },
+        "Question": {
+            "fields": {
+                "questionId": {
+                    "fieldLabel": "Question ID",
+                    "fieldType": "number",
+                    "fieldLength": null,
+                    "keyField": "yes",
+                    "showInForm": {
+                        "displayField": "hide"
+                    },
+                    "showInList": {
+                        "displayField": "show"
+                    },
+                    "showInDetailView": {
+                        "displayField": "show"
+                    }
+                },
+                "testId": {
+                    "fieldLabel": "Test",
+                    "fieldType": "lookup",
+                    "fieldLength": null,
+                    "keyField": "no",
+                    "lookupDefinition": {
+                        "lookupTable": "Test",
+                        "lookupTableIdField": "testId",
+                        "displayFieldColumn": "show"
+                    },
+                    "showInForm": {
+                        "displayField": "show"
+                    },
+                    "showInList": {
+                        "displayField": "show"
+                    },
+                    "showInDetailView": {
+                        "displayField": "show"
+                    }
+                },
+                "text": {
+                    "fieldLabel": "Question Text",
+                    "fieldType": "text",
+                    "fieldLength": "255",
+                    "keyField": "no",
+                    "showInForm": {
+                        "displayField": "show"
+                    },
+                    "showInList": {
+                        "displayField": "show"
+                    },
+                    "showInDetailView": {
+                        "displayField": "show"
+                    }
+                },
+                "created_at": {
+                    "fieldLabel": "Created At",
+                    "fieldType": "date",
+                    "fieldLength": null,
+                    "keyField": "no",
+                    "showInForm": {
+                        "displayField": "hide"
+                    },
+                    "showInList": {
+                        "displayField": "show"
+                    },
+                    "showInDetailView": {
+                        "displayField": "show"
+                    }
+                },
+                "updated_at": {
+                    "fieldLabel": "Updated At",
+                    "fieldType": "date",
+                    "fieldLength": null,
+                    "keyField": "no",
+                    "showInForm": {
+                        "displayField": "hide"
+                    },
+                    "showInList": {
+                        "displayField": "show"
+                    },
+                    "showInDetailView": {
+                        "displayField": "show"
+                    }
+                }
+            }
+        },
+        "TestQuestionAnswer": {
+            "fields": {
+                "testQuestionAnswerId": {
+                    "fieldLabel": "Test Question Answer ID",
+                    "fieldType": "number",
+                    "fieldLength": null,
+                    "keyField": "yes",
+                    "showInForm": {
+                        "displayField": "hide"
+                    },
+                    "showInList": {
+                        "displayField": "show"
+                    },
+                    "showInDetailView": {
+                        "displayField": "show"
+                    }
+                },
+                "questionId": {
+                    "fieldLabel": "Question",
+                    "fieldType": "lookup",
+                    "fieldLength": null,
+                    "keyField": "no",
+                    "lookupDefinition": {
+                        "lookupTable": "Question",
+                        "lookupTableIdField": "questionId",
+                        "displayFieldColumn": "show"
+                    },
+                    "showInForm": {
+                        "displayField": "show"
+                    },
+                    "showInList": {
+                        "displayField": "show"
+                    },
+                    "showInDetailView": {
+                        "displayField": "show"
+                    }
+                },
+                "answer": {
+                    "fieldLabel": "Answer",
+                    "fieldType": "text",
+                    "fieldLength": "255",
+                    "keyField": "no",
+                    "showInForm": {
+                        "displayField": "show"
+                    },
+                    "showInList": {
+                        "displayField": "show"
+                    },
+                    "showInDetailView": {
+                        "displayField": "show"
+                    }
+                },
+                "isCorrect": {
+                    "fieldLabel": "Is Correct",
+                    "fieldType": "lookup",
+                    "fieldLength": null,
+                    "keyField": "no",
+                    "lookupDefinition": {
+                        "values": {
+                            "1": "richtig",
+                            "0": "falsch"
+                        }
+                    },
+                    "showInForm": {
+                        "displayField": "show"
+                    },
+                    "showInList": {
+                        "displayField": "show"
+                    },
+                    "showInDetailView": {
+                        "displayField": "show"
+                    }
+                },
+                "created_at": {
+                    "fieldLabel": "Created At",
+                    "fieldType": "date",
+                    "fieldLength": null,
+                    "keyField": "no",
+                    "showInForm": {
+                        "displayField": "hide"
+                    },
+                    "showInList": {
+                        "displayField": "show"
+                    },
+                    "showInDetailView": {
+                        "displayField": "show"
+                    }
+                },
+                "updated_at": {
+                    "fieldLabel": "Updated At",
+                    "fieldType": "date",
+                    "fieldLength": null,
+                    "keyField": "no",
+                    "showInForm": {
+                        "displayField": "hide"
+                    },
+                    "showInList": {
+                        "displayField": "show"
+                    },
+                    "showInDetailView": {
+                        "displayField": "show"
+                    }
+                }
+            }
+        },
+        "StudentTestAnswer": {
+            "fields": {
+                "studentTestAnswerId": {
+                    "fieldLabel": "Student Test Answer ID",
+                    "fieldType": "number",
+                    "fieldLength": null,
+                    "keyField": "yes",
+                    "showInForm": {
+                        "displayField": "hide"
+                    },
+                    "showInList": {
+                        "displayField": "show"
+                    },
+                    "showInDetailView": {
+                        "displayField": "show"
+                    }
+                },
+                "studentTestId": {
+                    "fieldLabel": "Student Test",
+                    "fieldType": "lookup",
+                    "fieldLength": null,
+                    "keyField": "no",
+                    "lookupDefinition": {
+                        "lookupTable": "StudentTest",
+                        "lookupTableIdField": "studentTestId",
+                        "displayFieldColumn": "show"
+                    },
+                    "showInForm": {
+                        "displayField": "show"
+                    },
+                    "showInList": {
+                        "displayField": "show"
+                    },
+                    "showInDetailView": {
+                        "displayField": "show"
+                    }
+                },
+                "questionId": {
+                    "fieldLabel": "Question",
+                    "fieldType": "lookup",
+                    "fieldLength": null,
+                    "keyField": "no",
+                    "lookupDefinition": {
+                        "lookupTable": "Question",
+                        "lookupTableIdField": "questionId",
+                        "displayFieldColumn": "show"
+                    },
+                    "showInForm": {
+                        "displayField": "show"
+                    },
+                    "showInList": {
+                        "displayField": "show"
+                    },
+                    "showInDetailView": {
+                        "displayField": "show"
+                    }
+                },
+                "givenAnswerId": {
+                    "fieldLabel": "Given Answer",
+                    "fieldType": "lookup",
+                    "fieldLength": null,
+                    "keyField": "no",
+                    "lookupDefinition": {
+                        "lookupTable": "TestQuestionAnswer",
+                        "lookupTableIdField": "testQuestionAnswerId",
+                        "displayFieldColumn": "show"
+                    },
+                    "showInForm": {
+                        "displayField": "show"
+                    },
+                    "showInList": {
+                        "displayField": "show"
+                    },
+                    "showInDetailView": {
+                        "displayField": "show"
+                    }
+                },
+                "created_at": {
+                    "fieldLabel": "Created At",
+                    "fieldType": "date",
+                    "fieldLength": null,
+                    "keyField": "no",
+                    "showInForm": {
+                        "displayField": "hide"
+                    },
+                    "showInList": {
+                        "displayField": "show"
+                    },
+                    "showInDetailView": {
+                        "displayField": "show"
+                    }
+                },
+                "updated_at": {
+                    "fieldLabel": "Updated At",
+                    "fieldType": "date",
+                    "fieldLength": null,
+                    "keyField": "no",
+                    "showInForm": {
+                        "displayField": "hide"
+                    },
+                    "showInList": {
+                        "displayField": "show"
+                    },
+                    "showInDetailView": {
+                        "displayField": "show"
+                    }
+                }
+            }
+        },
+        "ScoringTable": {
+            "fields": {
+                "scoringTableId": {
+                    "fieldLabel": "Scoring Table ID",
+                    "fieldType": "number",
+                    "fieldLength": null,
+                    "keyField": "yes",
+                    "showInForm": {
+                        "displayField": "hide"
+                    },
+                    "showInList": {
+                        "displayField": "show"
+                    },
+                    "showInDetailView": {
+                        "displayField": "show"
+                    }
+                },
+                "scoreThreshold": {
+                    "fieldLabel": "Score Threshold",
+                    "fieldType": "number",
+                    "fieldLength": null,
+                    "keyField": "no",
+                    "showInForm": {
+                        "displayField": "show"
+                    },
+                    "showInList": {
+                        "displayField": "show"
+                    },
+                    "showInDetailView": {
+                        "displayField": "show"
+                    }
+                },
+                "grade": {
+                    "fieldLabel": "Grade",
+                    "fieldType": "text",
+                    "fieldLength": "50",
+                    "keyField": "no",
+                    "showInForm": {
+                        "displayField": "show"
+                    },
+                    "showInList": {
+                        "displayField": "show"
+                    },
+                    "showInDetailView": {
+                        "displayField": "show"
+                    }
+                },
+                "sex": {
+                    "fieldLabel": "Sex",
+                    "fieldType": "lookup",
+                    "fieldLength": null,
+                    "keyField": "no",
+                    "lookupDefinition": {
+                        "values": {
+                            "m": "men",
+                            "f": "female"
+                        }
+                    },
+                    "showInForm": {
+                        "displayField": "show"
+                    },
+                    "showInList": {
+                        "displayField": "show"
+                    },
+                    "showInDetailView": {
+                        "displayField": "show"
+                    }
+                },
+                "created_at": {
+                    "fieldLabel": "Created At",
+                    "fieldType": "date",
+                    "fieldLength": null,
+                    "keyField": "no",
+                    "showInForm": {
+                        "displayField": "hide"
+                    },
+                    "showInList": {
+                        "displayField": "show"
+                    },
+                    "showInDetailView": {
+                        "displayField": "show"
+                    }
+                },
+                "updated_at": {
+                    "fieldLabel": "Updated At",
+                    "fieldType": "date",
+                    "fieldLength": null,
+                    "keyField": "no",
+                    "showInForm": {
+                        "displayField": "hide"
+                    },
+                    "showInList": {
+                        "displayField": "show"
+                    },
+                    "showInDetailView": {
+                        "displayField": "show"
+                    }
+                }
+            }
+        }
+    }
+}
